@@ -1,4 +1,4 @@
-package com.prime.api.game.osrs.local.hud.interfaces;
+package com.prime.api.extension.game.osrs.local;
 
 import com.runemate.game.api.hybrid.local.Varbit;
 import com.runemate.game.api.hybrid.local.Varbits;

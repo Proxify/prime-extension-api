@@ -1,4 +1,4 @@
-package com.prime.api.extension.game.hybrid.local.hud.interfaces;
+package com.prime.api.extension.game.hybrid.local.hud;
 
 import com.runemate.game.api.hybrid.local.hud.interfaces.ChatDialog;
 import com.runemate.game.api.hybrid.util.Regex;

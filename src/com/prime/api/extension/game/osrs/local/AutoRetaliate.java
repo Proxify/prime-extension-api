@@ -1,4 +1,4 @@
-package com.prime.api.game.osrs.local;
+package com.prime.api.extension.game.osrs.local;
 
 import com.runemate.game.api.hybrid.local.Varps;
 import com.runemate.game.api.hybrid.local.hud.interfaces.InterfaceComponent;
@@ -17,22 +17,22 @@ public class AutoRetaliate {
     }
 
     public static boolean enable() {
-        return isEnabled() || toggle(false);
+        return isEnabled() || toggle(true);
     }
 
     public static boolean disable() {
-        return !isEnabled() || toggle(true);
+        return !isEnabled() || toggle(false);
     }
 
     private static boolean toggle(boolean enable) {
-        if(isEnabled() == enable) {
+        if (isEnabled() == enable) {
             return true;
         }
         final InterfaceComponent ic = getComponent();
         return ic != null
                 && ControlPanelTab.COMBAT_OPTIONS.open()
                 && ic.interact("Auto retaliate")
-                && Execution.delayUntil(() -> isEnabled() != enable, 1200, 1800);
+                && Execution.delayUntil(() -> isEnabled() == enable, 1200, 1800);
     }
 
     private static InterfaceComponent getComponent() {

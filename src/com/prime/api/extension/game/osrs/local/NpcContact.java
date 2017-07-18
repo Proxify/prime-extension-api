@@ -1,6 +1,5 @@
-package com.prime.bots.nature_runecrafter.data;
+package com.prime.api.extension.game.osrs.local;
 
-import com.prime.api.game.osrs.local.hud.interfaces.RunePouch;
 import com.runemate.game.api.hybrid.local.hud.interfaces.InterfaceComponent;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Interfaces;
 import com.runemate.game.api.hybrid.local.hud.interfaces.Inventory;
@@ -26,14 +25,14 @@ public class NpcContact {
     }
 
     public static boolean open() {
-        if(!canOpen()) {
+        if (!canOpen()) {
             return false;
         }
         return Magic.Lunar.NPC_CONTACT.activate() && Execution.delayUntil(NpcContact::isOpen, 1200, 1800);
     }
 
     public static boolean canQuickCast(String name) {
-        if(!ControlPanelTab.MAGIC.isOpen()) {
+        if (!ControlPanelTab.MAGIC.isOpen()) {
             ControlPanelTab.MAGIC.open();
         }
         final InterfaceComponent ic = Magic.Lunar.NPC_CONTACT.getComponent();
@@ -41,7 +40,7 @@ public class NpcContact {
     }
 
     public static boolean quickCast(String name) {
-        if(!canQuickCast(name)) {
+        if (!canQuickCast(name)) {
             return false;
         }
         return Magic.Lunar.NPC_CONTACT.activate(name);
@@ -51,7 +50,7 @@ public class NpcContact {
         final InterfaceComponent ic = getNpcComponent(name);
         final InterfaceComponent cont = getContainer();
 
-        if(ic == null || cont == null) {
+        if (ic == null || cont == null) {
             return false;
         }
 

@@ -1,4 +1,4 @@
-package com.prime.api.extension.game.hybrid.local;
+package com.prime.api.extension.game.osrs.local;
 
 import com.runemate.game.api.hybrid.local.Varps;
 import com.runemate.game.api.hybrid.local.hud.interfaces.InterfaceComponent;
@@ -35,7 +35,7 @@ public class SpecialAttack {
         if (isActivated() == enable) {
             return true;
         }
-        if (ControlPanelTab.COMBAT_OPTIONS.isOpen() || ControlPanelTab.COMBAT_OPTIONS.open()) {
+        if (ControlPanelTab.COMBAT_OPTIONS.open()) {
             final InterfaceComponent specialButton = getButton();
             return specialButton != null
                     && specialButton.isVisible()

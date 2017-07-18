@@ -1,4 +1,4 @@
-package com.prime.bots.nature_runecrafter.data;
+package com.prime.api.extension.game.osrs.local;
 
 import com.runemate.game.api.hybrid.local.Varbit;
 import com.runemate.game.api.hybrid.local.Varbits;
@@ -14,6 +14,8 @@ import java.util.stream.Stream;
 /**
  * @author Party
  * @version 1.0
+ *          <p>
+ *          THIS IS A POORLY WRITTEN CLASS. I wrote this for personal use - I do not recommend you use it "as is" for use on the bot store.
  **/
 public enum Pouch {
 
